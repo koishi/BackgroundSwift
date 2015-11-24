@@ -14,8 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+  {
+
+    // 通知の設定
+    let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound,], categories: nil)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications()
+
     return true
   }
 

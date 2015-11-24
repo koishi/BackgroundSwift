@@ -146,6 +146,11 @@
 				TargetAttributes = {
 					43D7EE401C007A750048A085 = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					43D7EE541C007A750048A085 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -388,6 +393,7 @@
 				43D7EE601C007A750048A085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43D7EE611C007A750048A085 /* Build configuration list for PBXNativeTarget "BackgroundSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +402,7 @@
 				43D7EE631C007A750048A085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

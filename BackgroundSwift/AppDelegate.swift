@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications()
 
+    // バックグラウンド処理の頻度を設定
+    UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+    
     return true
   }
 
@@ -47,6 +50,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
+  func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void)
+  {
+    // デバッグ出力
+    let now = NSDate()
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+    let string = formatter.stringFromDate(now)
+    print(string)
+
+    
+    
+//    // セッションの種類を決めます
+//    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    // セッションを作ります
+//    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+//    // データタスクを作成して実行します
+//    [[urlSeession dataTaskWithURL: [NSURL URLWithString: @"http://www.techfirm.co.jp/"]
+//      completionHandler:^(NSData *data, NSURLResponse *response,NSError *error) {
+//      NSLog(@"Got response %@ with error %@.\n", response, error);
+//      NSLog(@"DATA:\n%@\nEND DATA\n",[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding]);
+//      }] resume];
+    
+
+    let defaultConfigObject = NSURLSessionConfiguration.defaultSessionConfiguration()
+    let urlSession = NSURLsession.
+    
+    
+    
+    completionHandler(UIBackgroundFetchResult.NewData)
+  }
 
 }
 
